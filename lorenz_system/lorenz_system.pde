@@ -1,15 +1,30 @@
 float rho = 28.0;
 float sigma = 10.0;
 float beta = 8.0 / 3.0;
-float x,y,z;
+float x = 5;
+float y = 5;
+float z = 5;
 float dx,dy,dz;
+float dt = 0.01;
 
 void setup(){
   size(1000,1000);
+  background(0);
 }
 
 void draw(){
-  dx = sigma * (y - x);
-  dy = x * (rho - z) - y;
-  dz = x * y - beta * z;
+
+  translate(width / 2, height / 2);
+  
+  dx = (sigma * (y - x)) * dt;
+  dy = (x * (rho - z) - y) * dt;
+  dz = (x * y - beta * z) * dt;
+  
+  x += dx;
+  y += dy;
+  z += dz;
+  
+  stroke(255);
+  
+   point(x,y);
 }
