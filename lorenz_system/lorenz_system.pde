@@ -14,7 +14,7 @@ int m = 10;
 ArrayList<PVector> p = new ArrayList<PVector>(); 
 
 void setup(){
-  size(1000, 1000);
+  size(1000, 1000, P3D);
   
   noFill();
   stroke(255);
@@ -22,7 +22,6 @@ void setup(){
 
 void draw(){
   background(0);
-
   translate(width / 2, height / 2);
   
   dx = (sigma * (y - x)) * dt;
