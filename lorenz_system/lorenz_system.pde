@@ -15,6 +15,7 @@ void setup(){
 void draw(){
 
   translate(width / 2, height / 2);
+  scale(5);
   
   dx = (sigma * (y - x)) * dt;
   dy = (x * (rho - z) - y) * dt;
