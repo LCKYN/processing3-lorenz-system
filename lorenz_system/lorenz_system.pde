@@ -8,7 +8,7 @@ float dx,dy,dz;
 float dt = 0.01;
 
 void setup(){
-  size(1000,1000);
+  size(1000, 1000, P3D);
   background(0);
 }
 
@@ -27,5 +27,5 @@ void draw(){
   
   stroke(255);
   
-   point(x,y);
+   point(x,y,z);
 }
